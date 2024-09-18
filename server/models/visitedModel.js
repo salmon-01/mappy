@@ -18,3 +18,14 @@ exports.getVisitedCountries = async (userId) => {
   if (error) throw error;
   return data;
 };
+
+exports.removeVisitedCountry = async (userId, countryCode) => {
+  const { data, error } = await supabase
+    .from("visited_countries")
+    .delete()
+    .eq("user_id", userId)
+    .eq("country_code", countryCode);
+
+  if (error) throw error;
+  return data;
+};
