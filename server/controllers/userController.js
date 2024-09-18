@@ -36,7 +36,7 @@ exports.updateUserController = async (req, res) => {
   }
 };
 
-exports.deleteUser = async (req, res) => {
+exports.deleteUserController = async (req, res) => {
   const { userId } = req.params;
   try {
     await deleteUser(userId);
