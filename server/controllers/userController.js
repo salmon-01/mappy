@@ -1,4 +1,4 @@
-const { createUser, getUserById } = require("../models/userModel");
+const { createUser, getUserById, updateUser } = require("../models/userModel");
 
 exports.createUserController = async (req, res) => {
   const { email, username, displayName, avatar } = req.body;
@@ -14,6 +14,17 @@ exports.getUserController = async (req, res) => {
   const { userId } = req.params;
   try {
     const user = await getUserById(userId);
+    res.status(200).send(user);
+  } catch (error) {
+    res.status(400).send({ error: error.message });
+  }
+};
+
+exports.updateUserController = async (req, res) => {
+  const { userId } = req.params;
+  const updates = req.body;
+  try {
+    const user = await updateUser(userId, updates);
     res.status(200).send(user);
   } catch (error) {
     res.status(400).send({ error: error.message });
