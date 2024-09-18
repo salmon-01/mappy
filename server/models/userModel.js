@@ -19,3 +19,13 @@ exports.getUserById = async (userId) => {
   if (error) throw error;
   return data;
 };
+
+exports.updateUser = async (userId, updates) => {
+  const { data, error } = await supabase
+    .from("users")
+    .update(updates)
+    .eq("id", userId);
+
+  if (error) throw error;
+  return data;
+};
