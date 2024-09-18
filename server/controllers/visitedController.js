@@ -31,6 +31,7 @@ exports.removeVisitedController = async (req, res) => {
 
   try {
     await removeVisitedCountry(userId, countryCode);
+    res.status(200).send({ message: "Visited country deleted successfully" });
   } catch (error) {
     res.status(400).send({ error: error.message });
   }
