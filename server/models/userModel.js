@@ -29,3 +29,13 @@ exports.updateUser = async (userId, updates) => {
   if (error) throw error;
   return data;
 };
+
+exports.deleteUser = async (userId) => {
+  const { data, error } = await supabase
+    .from("users")
+    .delete()
+    .eq("id", userId);
+
+  if (error) throw error;
+  return data;
+};
