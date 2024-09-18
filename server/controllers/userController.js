@@ -1,4 +1,9 @@
-const { createUser, getUserById, updateUser } = require("../models/userModel");
+const {
+  createUser,
+  getUserById,
+  updateUser,
+  deleteUser,
+} = require("../models/userModel");
 
 exports.createUserController = async (req, res) => {
   const { email, username, displayName, avatar } = req.body;
@@ -26,6 +31,16 @@ exports.updateUserController = async (req, res) => {
   try {
     const user = await updateUser(userId, updates);
     res.status(200).send(user);
+  } catch (error) {
+    res.status(400).send({ error: error.message });
+  }
+};
+
+exports.deleteUser = async (req, res) => {
+  const { userId } = req.params;
+  try {
+    await deleteUser(userId);
+    res.status(200).send({ message: "User deleted successfully" });
   } catch (error) {
     res.status(400).send({ error: error.message });
   }
