@@ -8,3 +8,13 @@ exports.addVisitedCountry = async (userId, countryCode) => {
   if (error) throw error;
   return data;
 };
+
+exports.getVisitedCountries = async (userId) => {
+  const { data, error } = await supabase
+    .from("visited_countries")
+    .select("country_code")
+    .eq("user_id", userId);
+
+  if (error) throw error;
+  return data;
+};
