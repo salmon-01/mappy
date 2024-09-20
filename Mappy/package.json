@@ -18,6 +18,7 @@
     "@react-navigation/native": "^6.1.7",
     "@rnmapbox/maps": "^10.1.31",
     "@supabase/supabase-js": "^2.38.4",
+    "axios": "^1.7.7",
     "expo": "^51.0.32",
     "expo-constants": "~16.0.1",
     "expo-linking": "~6.3.1",
