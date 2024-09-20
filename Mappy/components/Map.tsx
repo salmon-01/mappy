@@ -1,30 +1,57 @@
-import React, { useState, useRef, useMemo } from 'react';
+import React, { useState, useRef, useMemo, useEffect } from 'react';
 import MapboxGL from '@rnmapbox/maps';
 import { MapView, Camera, VectorSource, FillLayer } from '@rnmapbox/maps';
 import BottomSheet from '@gorhom/bottom-sheet';
 import { StyleSheet } from 'react-native';
 import countries from '../assets/countries.json';
 import BottomSheetContent from './BottomSheetContent';
+import { getUserData } from '~/services/authService';
+import {
+  addVisitedCountry,
+  addWantToVisitCountry,
+  getVisitedCountry,
+  getWantToVisitCountries,
+  removeVisitedCountry,
+  removeWantToVisitCountry,
+} from '~/services/apiService';
 
 MapboxGL.setAccessToken(process.env.EXPO_PUBLIC_MAPBOX_KEY || '');
 
-type CountryStatus = {
-  visited: string[]; // Array of country ISO codes
-  wishlist: string[]; // Array of country ISO codes
-};
-
-const Map: React.FC = () => {
+const Map = () => {
   const [selectedCountry, setSelectedCountry] = useState(null);
-  const [countryStatus, setCountryStatus] = useState<CountryStatus>({
-    visited: [],
-    wishlist: [],
-  });
+  const [visitedCountries, setVisitedCountries] = useState<string[]>([]);
+  const [wantToVisitCountries, setWantToVisitCountries] = useState<string[]>([]);
+
   const mapRef = useRef<MapboxGL.MapView>(null);
   const bottomSheetRef = useRef<BottomSheet>(null);
 
   const snapPoints = useMemo(() => ['25%'], []);
 
-  const handleCountrySelection = async (event) => { // ! return later
+  useEffect(() => {
+    const fetchCountryData = async () => {
+      try {
+        const userData = await getUserData(); 
+        if (userData && userData.id) {
+          const userId = userData.id;
+
+          // Fetch visited countries and want to visit countries
+          const visitedResponse = await getVisitedCountry(userId);
+          const wishlistResponse = await getWantToVisitCountries(userId);
+
+          // Extract country codes
+          setVisitedCountries(visitedResponse.map((country) => country.country_code));
+          setWantToVisitCountries(wishlistResponse.map((country) => country.country_code));
+        }
+      } catch (error) {
+        console.error('Error fetching country data:', error);
+      }
+    };
+
+    fetchCountryData();
+  }, []);
+
+  const handleCountrySelection = async (event) => {
+    // ! return later
     const { properties } = event;
     if (!properties || !mapRef.current) return;
 
@@ -41,26 +68,36 @@ const Map: React.FC = () => {
     }
   };
 
-  const updateCountryStatus = (isoCode: string, statusType: 'visited' | 'wishlist') => {
-    setCountryStatus((prev) => {
-      // Get the other status type (either 'visited' or 'wishlist')
-      const otherStatusType = statusType === 'visited' ? 'wishlist' : 'visited';
+  const updateCountryStatus = async (isoCode: string, listType: 'visited' | 'wishlist') => {
+    const userData = await getUserData(); 
+    if (!userData || !userData.id) return; 
 
-      const isInCurrentList = prev[statusType].includes(isoCode);
-      const isInOtherList = prev[otherStatusType].includes(isoCode);
-      // ! come back later to complete
-      return {
-        ...prev,
-        // Toggle the country in the current list (add or remove)
-        [statusType]: isInCurrentList
-          ? prev[statusType].filter((code) => code !== isoCode) // Remove if already in list
-          : [...prev[statusType], isoCode], // Add if not in list
-        // Ensure the country is removed from the other list
-        [otherStatusType]: isInOtherList
-          ? prev[otherStatusType].filter((code) => code !== isoCode) // Remove from the other list
-          : prev[otherStatusType],
-      };
-    });
+    const userId = userData.id;
+
+    try {
+      console.log('Updating status for:', isoCode, 'List type:', listType);
+      console.log('Before update:', visitedCountries, wantToVisitCountries);
+
+      if (listType === 'visited') {
+        if (visitedCountries.includes(isoCode)) {
+          await removeVisitedCountry(userId, isoCode); // Remove from visited in backend
+          setVisitedCountries((prev) => prev.filter((code) => code !== isoCode)); // Remove from local state
+        } else {
+          await addVisitedCountry(userId, isoCode); // Add to visited in backend
+          setVisitedCountries((prev) => [...prev, isoCode]); // Add to local state
+        }
+      } else if (listType === 'wishlist') {
+        if (wantToVisitCountries.includes(isoCode)) {
+          await removeWantToVisitCountry(userId, isoCode); // Remove from wishlist in backend
+          setWantToVisitCountries((prev) => prev.filter((code) => code !== isoCode)); // Remove from local state
+        } else {
+          await addWantToVisitCountry(userId, isoCode); // Add to wishlist in backend
+          setWantToVisitCountries((prev) => [...prev, isoCode]); // Add to local state
+        }
+      }
+    } catch (error) {
+      console.error('Error updating country status:', error);
+    }
   };
 
   const getCountryName = (isoCode: string) => {
@@ -75,7 +112,7 @@ const Map: React.FC = () => {
         style={{ flex: 1 }}
         styleURL="mapbox://styles/mapbox/light-v11"
         onPress={handleCountrySelection}>
-        <Camera followZoomLevel={16} centerCoordinate={[0, 20]} />
+        <Camera followZoomLevel={8} centerCoordinate={[0, 20]} />
         <VectorSource id="countrySource" url="mapbox://mapbox.country-boundaries-v1">
           <FillLayer
             id="country-fill"
@@ -83,19 +120,19 @@ const Map: React.FC = () => {
             style={{
               fillColor: [
                 'case',
-                ['in', ['get', 'iso_3166_1_alpha_3'], ['literal', countryStatus.visited]],
+                ['in', ['get', 'iso_3166_1_alpha_3'], ['literal', visitedCountries]],
                 '#0000FF',
-                ['in', ['get', 'iso_3166_1_alpha_3'], ['literal', countryStatus.wishlist]],
+                ['in', ['get', 'iso_3166_1_alpha_3'], ['literal', wantToVisitCountries]],
                 '#FFA500',
                 '#CCCCCC',
               ],
               fillOpacity: [
                 'case',
-                ['in', ['get', 'iso_3166_1_alpha_3'], ['literal', countryStatus.visited]],
-                0.5, // Fully opaque for visited countries
-                ['in', ['get', 'iso_3166_1_alpha_3'], ['literal', countryStatus.wishlist]],
-                0.5, // Slightly transparent for wishlist countries
-                0, // Default opacity for all other countries
+                ['in', ['get', 'iso_3166_1_alpha_3'], ['literal', visitedCountries]],
+                0.5, 
+                ['in', ['get', 'iso_3166_1_alpha_3'], ['literal', wantToVisitCountries]],
+                0.5, 
+                0, 
               ],
             }}
           />
@@ -104,7 +141,8 @@ const Map: React.FC = () => {
       <BottomSheet ref={bottomSheetRef} index={-1} snapPoints={snapPoints} enablePanDownToClose>
         <BottomSheetContent
           selectedCountry={selectedCountry}
-          countryStatus={countryStatus}
+          visitedCountries={visitedCountries}
+          wantToVisitCountries={wantToVisitCountries}
           getCountryName={getCountryName}
           updateCountryStatus={updateCountryStatus}
         />
@@ -114,23 +152,3 @@ const Map: React.FC = () => {
 };
 
 export default Map;
-
-const styles = StyleSheet.create({
-  bottomSheetContent: {
-    backgroundColor: 'white',
-    padding: 16,
-    flex: 1,
-  },
-  countryName: {
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-  buttonText: {
-    marginVertical: 8,
-    fontSize: 16,
-    color: '#007AFF',
-  },
-  disabledText: {
-    color: 'gray',
-  },
-});
