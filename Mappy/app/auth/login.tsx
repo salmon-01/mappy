@@ -2,12 +2,14 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import LoginButton from '../../components/LoginButton';
 import { useRouter } from 'expo-router';
+import { loginUser } from '~/services/authService';
 
-const LoginScreen: React.FC = () => {
+const LoginScreen = () => {
   const router = useRouter();
 
-  const handleLogin = (provider: string) => {
+  const handleLogin = async (provider: string) => {
     console.log(`Logging in with ${provider}`);
+    await loginUser();
     router.replace('/auth/welcome');
   };
 
