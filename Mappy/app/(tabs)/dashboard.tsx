@@ -1,46 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import countries from '~/assets/countries.json';
-import { getUserData } from '~/services/authService';
-import { getVisitedCountry, getWantToVisitCountries } from '~/services/apiService';
-
+import { CountryContext } from '~/context/CountryContext'; 
 import UserProfile from '~/components/UserProfile';
 import Stats from '~/components/Stats';
 import CountryBottomSheet from '~/components/CountryBottomSheet';
 import SettingsBottomSheet from '~/components/SettingsBottomSheet';
 
 import avatar from '~/assets/avatars/avatar1.png';
-
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const Dashboard = () => {
-  const [visitedCountries, setVisitedCountries] = useState<string[]>([]);
-  const [wishlistCountries, setWishlistCountries] = useState<string[]>([]);
+  const { visitedCountries, wishlistCountries } = useContext(CountryContext)!; 
   const [showVisited, setShowVisited] = useState(true);
-
   const [isSettingsVisible, setSettingsVisible] = useState(false);
 
-  useEffect(() => {
-    const fetchCountryData = async () => {
-      try {
-        const userData = await getUserData();
-        if (userData && userData.id) {
-          const visitedResponse = await getVisitedCountry(userData.id);
-          const wishlistResponse = await getWantToVisitCountries(userData.id);
-          setVisitedCountries(visitedResponse.map((country: any) => country.country_code));
-          setWishlistCountries(wishlistResponse.map((country: any) => country.country_code));
-        }
-      } catch (error) {
-        console.error('Error fetching country data:', error);
-      }
-    };
-
-    fetchCountryData();
-  }, []);
-
   // DB country_code to countries.json country details
-  const getCountryDetails = (isoCode: string) => {
-    return countries.find((c) => c.iso_3166_1_alpha_3 === isoCode);
+  const getCountryDetails = (isoCode: string): { name: string; continent: string } | undefined => {
+    const country = countries.find((c: { iso_3166_1_alpha_3: string }) => c.iso_3166_1_alpha_3 === isoCode);
+    return country ? { name: country.name, continent: country.continent || 'Unknown' } : undefined;
   };
 
   const totalVisitedCountries = visitedCountries.length;
@@ -100,11 +78,6 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     backgroundColor: '#fff',
-  },
-  bottomSheetContent: {
-    flex: 1,
-    paddingHorizontal: 16,
-    paddingVertical: 10,
   },
 });
 
