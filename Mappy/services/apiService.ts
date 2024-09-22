@@ -9,6 +9,14 @@ interface User {
   avatar: string;
 }
 
+export interface Country {
+  code: string; 
+  name: string;
+  flag: string;
+  continent: string;
+}
+
+
 export const createUser = async (userData: User) => {
   const res = await axios.post(`${BASE_URL}/users`, userData);
   return res.data;
