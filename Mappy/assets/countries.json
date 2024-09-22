@@ -2,87 +2,104 @@
   {
     "name": "South Georgia",
     "iso_3166_1_alpha_3": "SGS",
-    "flag": "sgs"
+    "flag": "sgs",
+    "continent": "South America"
   },
   {
     "name": "Grenada",
     "iso_3166_1_alpha_3": "GRD",
-    "flag": "grd"
+    "flag": "grd",
+    "continent": "North America"
   },
   {
     "name": "Switzerland",
     "iso_3166_1_alpha_3": "CHE",
-    "flag": "che"
+    "flag": "che",
+    "continent": "Europe"
   },
   {
     "name": "Sierra Leone",
     "iso_3166_1_alpha_3": "SLE",
-    "flag": "sle"
+    "flag": "sle",
+    "continent": "Africa"
   },
   {
     "name": "Hungary",
     "iso_3166_1_alpha_3": "HUN",
-    "flag": "hun"
+    "flag": "hun",
+    "continent": "Europe"
   },
   {
     "name": "Taiwan",
     "iso_3166_1_alpha_3": "TWN",
-    "flag": "twn"
+    "flag": "twn",
+    "continent": "Asia"
   },
   {
     "name": "Wallis and Futuna",
     "iso_3166_1_alpha_3": "WLF",
-    "flag": "wlf"
+    "flag": "wlf",
+    "continent": "Oceania"
   },
   {
     "name": "Barbados",
     "iso_3166_1_alpha_3": "BRB",
-    "flag": "brb"
+    "flag": "brb",
+    "continent": "North America"
   },
   {
     "name": "Pitcairn Islands",
     "iso_3166_1_alpha_3": "PCN",
-    "flag": "pcn"
+    "flag": "pcn",
+    "continent": "Oceania"
   },
   {
     "name": "Ivory Coast",
     "iso_3166_1_alpha_3": "CIV",
-    "flag": "civ"
+    "flag": "civ",
+    "continent": "Africa"
   },
   {
     "name": "Tunisia",
     "iso_3166_1_alpha_3": "TUN",
-    "flag": "tun"
+    "flag": "tun",
+    "continent": "Africa"
   },
   {
     "name": "Italy",
     "iso_3166_1_alpha_3": "ITA",
-    "flag": "ita"
+    "flag": "ita",
+    "continent": "Europe"
   },
   {
     "name": "Benin",
     "iso_3166_1_alpha_3": "BEN",
-    "flag": "ben"
+    "flag": "ben",
+    "continent": "Africa"
   },
   {
     "name": "Indonesia",
     "iso_3166_1_alpha_3": "IDN",
-    "flag": "idn"
+    "flag": "idn",
+    "continent": "Asia"
   },
   {
     "name": "Cape Verde",
     "iso_3166_1_alpha_3": "CPV",
-    "flag": "cpv"
+    "flag": "cpv",
+    "continent": "Africa"
   },
   {
     "name": "Saint Kitts and Nevis",
     "iso_3166_1_alpha_3": "KNA",
-    "flag": "kna"
+    "flag": "kna",
+    "continent": "North America"
   },
   {
     "name": "Laos",
     "iso_3166_1_alpha_3": "LAO",
-    "flag": "lao"
+    "flag": "lao",
+    "continent": "Asia"
   },
   {
     "name": "Caribbean Netherlands",
@@ -92,82 +109,98 @@
   {
     "name": "Uganda",
     "iso_3166_1_alpha_3": "UGA",
-    "flag": "uga"
+    "flag": "uga",
+    "continent": "Africa"
   },
   {
     "name": "Andorra",
     "iso_3166_1_alpha_3": "AND",
-    "flag": "and"
+    "flag": "and",
+    "continent": "Europe"
   },
   {
     "name": "Burundi",
     "iso_3166_1_alpha_3": "BDI",
-    "flag": "bdi"
+    "flag": "bdi",
+    "continent": "Africa"
   },
   {
     "name": "South Africa",
     "iso_3166_1_alpha_3": "ZAF",
-    "flag": "zaf"
+    "flag": "zaf",
+    "continent": "Africa"
   },
   {
     "name": "France",
     "iso_3166_1_alpha_3": "FRA",
-    "flag": "fra"
+    "flag": "fra",
+    "continent": "Europe"
   },
   {
     "name": "Libya",
     "iso_3166_1_alpha_3": "LBY",
-    "flag": "lby"
+    "flag": "lby",
+    "continent": "Africa"
   },
   {
     "name": "Mexico",
     "iso_3166_1_alpha_3": "MEX",
-    "flag": "mex"
+    "flag": "mex",
+    "continent": "North America"
   },
   {
     "name": "Gabon",
     "iso_3166_1_alpha_3": "GAB",
-    "flag": "gab"
+    "flag": "gab",
+    "continent": "Africa"
   },
   {
     "name": "Northern Mariana Islands",
     "iso_3166_1_alpha_3": "MNP",
-    "flag": "mnp"
+    "flag": "mnp",
+    "continent": "Oceania"
   },
   {
     "name": "North Macedonia",
     "iso_3166_1_alpha_3": "MKD",
-    "flag": "mkd"
+    "flag": "mkd",
+    "continent": "Europe"
   },
   {
     "name": "China",
     "iso_3166_1_alpha_3": "CHN",
-    "flag": "chn"
+    "flag": "chn",
+    "continent": "Asia"
   },
   {
     "name": "Yemen",
     "iso_3166_1_alpha_3": "YEM",
-    "flag": "yem"
+    "flag": "yem",
+    "continent": "Asia"
   },
   {
     "name": "Saint Barthélemy",
     "iso_3166_1_alpha_3": "BLM",
-    "flag": "blm"
+    "flag": "blm",
+    "continent": "North America"
   },
   {
     "name": "Guernsey",
     "iso_3166_1_alpha_3": "GGY",
-    "flag": "ggy"
+    "flag": "ggy",
+    "continent": "Europe"
   },
   {
     "name": "Solomon Islands",
     "iso_3166_1_alpha_3": "SLB",
-    "flag": "slb"
+    "flag": "slb",
+    "continent": "Oceania"
   },
   {
     "name": "Svalbard and Jan Mayen",
     "iso_3166_1_alpha_3": "SJM",
-    "flag": "sjm"
+    "flag": "sjm",
+    "continent": "Europe"
   },
   {
     "name": "Faroe Islands",
@@ -177,32 +210,38 @@
   {
     "name": "Uzbekistan",
     "iso_3166_1_alpha_3": "UZB",
-    "flag": "uzb"
+    "flag": "uzb",
+    "continent": "Asia"
   },
   {
     "name": "Egypt",
     "iso_3166_1_alpha_3": "EGY",
-    "flag": "egy"
+    "flag": "egy",
+    "continent": "Africa"
   },
   {
     "name": "Senegal",
     "iso_3166_1_alpha_3": "SEN",
-    "flag": "sen"
+    "flag": "sen",
+    "continent": "Africa"
   },
   {
     "name": "Sri Lanka",
     "iso_3166_1_alpha_3": "LKA",
-    "flag": "lka"
+    "flag": "lka",
+    "continent": "Asia"
   },
   {
     "name": "Palestine",
     "iso_3166_1_alpha_3": "PSE",
-    "flag": "pse"
+    "flag": "pse",
+    "continent": "Asia"
   },
   {
     "name": "Bangladesh",
     "iso_3166_1_alpha_3": "BGD",
-    "flag": "bgd"
+    "flag": "bgd",
+    "continent": "Asia"
   },
   {
     "name": "Peru",
@@ -212,97 +251,116 @@
   {
     "name": "Singapore",
     "iso_3166_1_alpha_3": "SGP",
-    "flag": "sgp"
+    "flag": "sgp",
+    "continent": "Asia"
   },
   {
     "name": "Turkey",
     "iso_3166_1_alpha_3": "TUR",
-    "flag": "tur"
+    "flag": "tur",
+    "continent": "Asia"
   },
   {
     "name": "Afghanistan",
     "iso_3166_1_alpha_3": "AFG",
-    "flag": "afg"
+    "flag": "afg",
+    "continent": "Asia"
   },
   {
     "name": "Aruba",
     "iso_3166_1_alpha_3": "ABW",
-    "flag": "abw"
+    "flag": "abw",
+    "continent": "North America"
   },
   {
     "name": "Cook Islands",
     "iso_3166_1_alpha_3": "COK",
-    "flag": "cok"
+    "flag": "cok",
+    "continent": "Oceania"
   },
   {
     "name": "United Kingdom",
     "iso_3166_1_alpha_3": "GBR",
-    "flag": "gbr"
+    "flag": "gbr",
+    "continent": "Europe"
   },
   {
     "name": "Zambia",
     "iso_3166_1_alpha_3": "ZMB",
-    "flag": "zmb"
+    "flag": "zmb",
+    "continent": "Africa"
   },
   {
     "name": "Finland",
     "iso_3166_1_alpha_3": "FIN",
-    "flag": "fin"
+    "flag": "fin",
+    "continent": "Europe"
   },
   {
     "name": "Niger",
     "iso_3166_1_alpha_3": "NER",
-    "flag": "ner"
+    "flag": "ner",
+    "continent": "Africa"
   },
   {
     "name": "Christmas Island",
     "iso_3166_1_alpha_3": "CXR",
-    "flag": "cxr"
+    "flag": "cxr",
+    "continent": "Asia"
   },
   {
     "name": "Tokelau",
     "iso_3166_1_alpha_3": "TKL",
-    "flag": "tkl"
+    "flag": "tkl",
+    "continent": "Oceania"
   },
   {
     "name": "Guinea-Bissau",
     "iso_3166_1_alpha_3": "GNB",
-    "flag": "gnb"
+    "flag": "gnb",
+    "continent": "Africa"
   },
   {
     "name": "Azerbaijan",
     "iso_3166_1_alpha_3": "AZE",
-    "flag": "aze"
+    "flag": "aze",
+    "continent": "Asia"
   },
   {
     "name": "Réunion",
     "iso_3166_1_alpha_3": "REU",
-    "flag": "reu"
+    "flag": "reu",
+    "continent": "Africa"
   },
   {
     "name": "Djibouti",
     "iso_3166_1_alpha_3": "DJI",
-    "flag": "dji"
+    "flag": "dji",
+    "continent": "Africa"
   },
   {
     "name": "North Korea",
     "iso_3166_1_alpha_3": "PRK",
-    "flag": "prk"
+    "flag": "prk",
+    "continent": "Asia"
   },
   {
     "name": "Mauritius",
     "iso_3166_1_alpha_3": "MUS",
-    "flag": "mus"
+    "flag": "mus",
+    "continent": "Africa"
   },
   {
     "name": "Montserrat",
     "iso_3166_1_alpha_3": "MSR",
-    "flag": "msr"
+    "flag": "msr",
+    "continent": "North America"
   },
   {
     "name": "United States Virgin Islands",
     "iso_3166_1_alpha_3": "VIR",
-    "flag": "vir"
+    "flag": "vir",
+    "continent": "North America"
   },
   {
     "name": "Colombia",
@@ -312,941 +370,1129 @@
   {
     "name": "Greece",
     "iso_3166_1_alpha_3": "GRC",
-    "flag": "grc"
+    "flag": "grc",
+    "continent": "Europe"
   },
   {
     "name": "Croatia",
     "iso_3166_1_alpha_3": "HRV",
-    "flag": "hrv"
+    "flag": "hrv",
+    "continent": "Europe"
   },
   {
     "name": "Morocco",
     "iso_3166_1_alpha_3": "MAR",
-    "flag": "mar"
+    "flag": "mar",
+    "continent": "Africa"
   },
   {
     "name": "Algeria",
     "iso_3166_1_alpha_3": "DZA",
-    "flag": "dza"
+    "flag": "dza",
+    "continent": "Africa"
   },
   {
     "name": "Antarctica",
     "iso_3166_1_alpha_3": "ATA",
-    "flag": "ata"
+    "flag": "ata",
+    "continent": "Antarctica"
   },
   {
     "name": "Netherlands",
     "iso_3166_1_alpha_3": "NLD",
-    "flag": "nld"
+    "flag": "nld",
+    "continent": "Europe"
   },
   {
     "name": "Sudan",
     "iso_3166_1_alpha_3": "SDN",
-    "flag": "sdn"
+    "flag": "sdn",
+    "continent": "Africa"
   },
   {
     "name": "Fiji",
     "iso_3166_1_alpha_3": "FJI",
-    "flag": "fji"
+    "flag": "fji",
+    "continent": "Oceania"
   },
   {
     "name": "Liechtenstein",
     "iso_3166_1_alpha_3": "LIE",
-    "flag": "lie"
+    "flag": "lie",
+    "continent": "Europe"
   },
   {
     "name": "Nepal",
     "iso_3166_1_alpha_3": "NPL",
-    "flag": "npl"
+    "flag": "npl",
+    "continent": "Asia"
   },
   {
     "name": "Puerto Rico",
     "iso_3166_1_alpha_3": "PRI",
-    "flag": "pri"
+    "flag": "pri",
+    "continent": "North America"
   },
   {
     "name": "Georgia",
     "iso_3166_1_alpha_3": "GEO",
-    "flag": "geo"
+    "flag": "geo",
+    "continent": "Asia"
   },
   {
     "name": "Pakistan",
     "iso_3166_1_alpha_3": "PAK",
-    "flag": "pak"
+    "flag": "pak",
+    "continent": "Asia"
   },
   {
     "name": "Monaco",
     "iso_3166_1_alpha_3": "MCO",
-    "flag": "mco"
+    "flag": "mco",
+    "continent": "Europe"
   },
   {
     "name": "Botswana",
     "iso_3166_1_alpha_3": "BWA",
-    "flag": "bwa"
+    "flag": "bwa",
+    "continent": "Africa"
   },
   {
     "name": "Lebanon",
     "iso_3166_1_alpha_3": "LBN",
-    "flag": "lbn"
+    "flag": "lbn",
+    "continent": "Asia"
   },
   {
     "name": "Papua New Guinea",
     "iso_3166_1_alpha_3": "PNG",
-    "flag": "png"
+    "flag": "png",
+    "continent": "Oceania"
   },
   {
     "name": "Mayotte",
     "iso_3166_1_alpha_3": "MYT",
-    "flag": "myt"
+    "flag": "myt",
+    "continent": "Africa"
   },
   {
     "name": "Dominican Republic",
     "iso_3166_1_alpha_3": "DOM",
-    "flag": "dom"
+    "flag": "dom",
+    "continent": "North America"
   },
   {
     "name": "Norfolk Island",
     "iso_3166_1_alpha_3": "NFK",
-    "flag": "nfk"
+    "flag": "nfk",
+    "continent": "Oceania"
   },
   {
     "name": "Bouvet Island",
     "iso_3166_1_alpha_3": "BVT",
-    "flag": "bvt"
+    "flag": "bvt",
+    "continent": "Antarctica"
   },
   {
     "name": "Qatar",
     "iso_3166_1_alpha_3": "QAT",
-    "flag": "qat"
+    "flag": "qat",
+    "continent": "Asia"
   },
   {
     "name": "Madagascar",
     "iso_3166_1_alpha_3": "MDG",
-    "flag": "mdg"
+    "flag": "mdg",
+    "continent": "Africa"
   },
   {
     "name": "India",
     "iso_3166_1_alpha_3": "IND",
-    "flag": "ind"
+    "flag": "ind",
+    "continent": "Asia"
   },
   {
     "name": "Syria",
     "iso_3166_1_alpha_3": "SYR",
-    "flag": "syr"
+    "flag": "syr",
+    "continent": "Asia"
   },
   {
     "name": "Montenegro",
     "iso_3166_1_alpha_3": "MNE",
-    "flag": "mne"
+    "flag": "mne",
+    "continent": "Europe"
   },
   {
     "name": "Eswatini",
     "iso_3166_1_alpha_3": "SWZ",
-    "flag": "swz"
+    "flag": "swz",
+    "continent": "Africa"
   },
   {
     "name": "Paraguay",
     "iso_3166_1_alpha_3": "PRY",
-    "flag": "pry"
+    "flag": "pry",
+    "continent": "South America"
   },
   {
     "name": "El Salvador",
     "iso_3166_1_alpha_3": "SLV",
-    "flag": "slv"
+    "flag": "slv",
+    "continent": "North America"
   },
   {
     "name": "Ukraine",
     "iso_3166_1_alpha_3": "UKR",
-    "flag": "ukr"
+    "flag": "ukr",
+    "continent": "Europe"
   },
   {
     "name": "Isle of Man",
     "iso_3166_1_alpha_3": "IMN",
-    "flag": "imn"
+    "flag": "imn",
+    "continent": "Europe"
   },
   {
     "name": "Namibia",
     "iso_3166_1_alpha_3": "NAM",
-    "flag": "nam"
+    "flag": "nam",
+    "continent": "Africa"
   },
   {
     "name": "United Arab Emirates",
     "iso_3166_1_alpha_3": "ARE",
-    "flag": "are"
+    "flag": "are",
+    "continent": "Asia"
   },
   {
     "name": "Bulgaria",
     "iso_3166_1_alpha_3": "BGR",
-    "flag": "bgr"
+    "flag": "bgr",
+    "continent": "Europe"
   },
   {
     "name": "Greenland",
     "iso_3166_1_alpha_3": "GRL",
-    "flag": "grl"
+    "flag": "grl",
+    "continent": "North America"
   },
   {
     "name": "Germany",
     "iso_3166_1_alpha_3": "DEU",
-    "flag": "deu"
+    "flag": "deu",
+    "continent": "Europe"
   },
   {
     "name": "Cambodia",
     "iso_3166_1_alpha_3": "KHM",
-    "flag": "khm"
+    "flag": "khm",
+    "continent": "Asia"
   },
   {
     "name": "Iraq",
     "iso_3166_1_alpha_3": "IRQ",
-    "flag": "irq"
+    "flag": "irq",
+    "continent": "Asia"
   },
   {
     "name": "French Southern and Antarctic Lands",
     "iso_3166_1_alpha_3": "ATF",
-    "flag": "atf"
+    "flag": "atf",
+    "continent": "Antarctica"
   },
   {
     "name": "Sweden",
     "iso_3166_1_alpha_3": "SWE",
-    "flag": "swe"
+    "flag": "swe",
+    "continent": "Europe"
   },
   {
     "name": "Cuba",
     "iso_3166_1_alpha_3": "CUB",
-    "flag": "cub"
+    "flag": "cub",
+    "continent": "North America"
   },
   {
     "name": "Kyrgyzstan",
     "iso_3166_1_alpha_3": "KGZ",
-    "flag": "kgz"
+    "flag": "kgz",
+    "continent": "Asia"
   },
   {
     "name": "Russia",
     "iso_3166_1_alpha_3": "RUS",
-    "flag": "rus"
+    "flag": "rus",
+    "continent": "Europe"
   },
   {
     "name": "Malaysia",
     "iso_3166_1_alpha_3": "MYS",
-    "flag": "mys"
+    "flag": "mys",
+    "continent": "Asia"
   },
   {
     "name": "São Tomé and Príncipe",
     "iso_3166_1_alpha_3": "STP",
-    "flag": "stp"
+    "flag": "stp",
+    "continent": "Africa"
   },
   {
     "name": "Cyprus",
     "iso_3166_1_alpha_3": "CYP",
-    "flag": "cyp"
+    "flag": "cyp",
+    "continent": "Europe"
   },
   {
     "name": "Canada",
     "iso_3166_1_alpha_3": "CAN",
-    "flag": "can"
+    "flag": "can",
+    "continent": "North America"
   },
   {
     "name": "Malawi",
     "iso_3166_1_alpha_3": "MWI",
-    "flag": "mwi"
+    "flag": "mwi",
+    "continent": "Africa"
   },
   {
     "name": "Saudi Arabia",
     "iso_3166_1_alpha_3": "SAU",
-    "flag": "sau"
+    "flag": "sau",
+    "continent": "Asia"
   },
   {
     "name": "Bosnia and Herzegovina",
     "iso_3166_1_alpha_3": "BIH",
-    "flag": "bih"
+    "flag": "bih",
+    "continent": "Europe"
   },
   {
     "name": "Ethiopia",
     "iso_3166_1_alpha_3": "ETH",
-    "flag": "eth"
+    "flag": "eth",
+    "continent": "Africa"
   },
   {
     "name": "Spain",
     "iso_3166_1_alpha_3": "ESP",
-    "flag": "esp"
+    "flag": "esp",
+    "continent": "Europe"
   },
   {
     "name": "Slovenia",
     "iso_3166_1_alpha_3": "SVN",
-    "flag": "svn"
+    "flag": "svn",
+    "continent": "Europe"
   },
   {
     "name": "Oman",
     "iso_3166_1_alpha_3": "OMN",
-    "flag": "omn"
+    "flag": "omn",
+    "continent": "Asia"
   },
   {
     "name": "Saint Pierre and Miquelon",
     "iso_3166_1_alpha_3": "SPM",
-    "flag": "spm"
+    "flag": "spm",
+    "continent": "North America"
   },
   {
     "name": "Macau",
     "iso_3166_1_alpha_3": "MAC",
-    "flag": "mac"
+    "flag": "mac",
+    "continent": "Asia"
   },
   {
     "name": "San Marino",
     "iso_3166_1_alpha_3": "SMR",
-    "flag": "smr"
+    "flag": "smr",
+    "continent": "Europe"
   },
   {
     "name": "Lesotho",
     "iso_3166_1_alpha_3": "LSO",
-    "flag": "lso"
+    "flag": "lso",
+    "continent": "Africa"
   },
   {
     "name": "Marshall Islands",
     "iso_3166_1_alpha_3": "MHL",
-    "flag": "mhl"
+    "flag": "mhl",
+    "continent": "Oceania"
   },
   {
     "name": "Sint Maarten",
     "iso_3166_1_alpha_3": "SXM",
-    "flag": "sxm"
+    "flag": "sxm",
+    "continent": "North America"
   },
   {
     "name": "Iceland",
     "iso_3166_1_alpha_3": "ISL",
-    "flag": "isl"
+    "flag": "isl",
+    "continent": "Europe"
   },
   {
     "name": "Luxembourg",
     "iso_3166_1_alpha_3": "LUX",
-    "flag": "lux"
+    "flag": "lux",
+    "continent": "Europe"
   },
   {
     "name": "Argentina",
     "iso_3166_1_alpha_3": "ARG",
-    "flag": "arg"
+    "flag": "arg",
+    "continent": "South America"
   },
   {
     "name": "Turks and Caicos Islands",
     "iso_3166_1_alpha_3": "TCA",
-    "flag": "tca"
+    "flag": "tca",
+    "continent": "North America"
   },
   {
     "name": "Nauru",
     "iso_3166_1_alpha_3": "NRU",
-    "flag": "nru"
+    "flag": "nru",
+    "continent": "Oceania"
   },
   {
     "name": "Cocos (Keeling) Islands",
     "iso_3166_1_alpha_3": "CCK",
-    "flag": "cck"
+    "flag": "cck",
+    "continent": "Asia"
   },
   {
     "name": "Western Sahara",
     "iso_3166_1_alpha_3": "ESH",
-    "flag": "esh"
+    "flag": "esh",
+    "continent": "Africa"
   },
   {
     "name": "Dominica",
     "iso_3166_1_alpha_3": "DMA",
-    "flag": "dma"
+    "flag": "dma",
+    "continent": "North America"
   },
   {
     "name": "Costa Rica",
     "iso_3166_1_alpha_3": "CRI",
-    "flag": "cri"
+    "flag": "cri",
+    "continent": "North America"
   },
   {
     "name": "Australia",
     "iso_3166_1_alpha_3": "AUS",
-    "flag": "aus"
+    "flag": "aus",
+    "continent": "Oceania"
   },
   {
     "name": "Thailand",
     "iso_3166_1_alpha_3": "THA",
-    "flag": "tha"
+    "flag": "tha",
+    "continent": "Asia"
   },
   {
     "name": "Haiti",
     "iso_3166_1_alpha_3": "HTI",
-    "flag": "hti"
+    "flag": "hti",
+    "continent": "North America"
   },
   {
     "name": "Tuvalu",
     "iso_3166_1_alpha_3": "TUV",
-    "flag": "tuv"
+    "flag": "tuv",
+    "continent": "Oceania"
   },
   {
     "name": "Honduras",
     "iso_3166_1_alpha_3": "HND",
-    "flag": "hnd"
+    "flag": "hnd",
+    "continent": "North America"
   },
   {
     "name": "Equatorial Guinea",
     "iso_3166_1_alpha_3": "GNQ",
-    "flag": "gnq"
+    "flag": "gnq",
+    "continent": "Africa"
   },
   {
     "name": "Saint Lucia",
     "iso_3166_1_alpha_3": "LCA",
-    "flag": "lca"
+    "flag": "lca",
+    "continent": "North America"
   },
   {
     "name": "French Polynesia",
     "iso_3166_1_alpha_3": "PYF",
-    "flag": "pyf"
+    "flag": "pyf",
+    "continent": "Oceania"
   },
   {
     "name": "Belarus",
     "iso_3166_1_alpha_3": "BLR",
-    "flag": "blr"
+    "flag": "blr",
+    "continent": "Europe"
   },
   {
     "name": "Latvia",
     "iso_3166_1_alpha_3": "LVA",
-    "flag": "lva"
+    "flag": "lva",
+    "continent": "Europe"
   },
   {
     "name": "Palau",
     "iso_3166_1_alpha_3": "PLW",
-    "flag": "plw"
+    "flag": "plw",
+    "continent": "Oceania"
   },
   {
     "name": "Guadeloupe",
     "iso_3166_1_alpha_3": "GLP",
-    "flag": "glp"
+    "flag": "glp",
+    "continent": "North America"
   },
   {
     "name": "Philippines",
     "iso_3166_1_alpha_3": "PHL",
-    "flag": "phl"
+    "flag": "phl",
+    "continent": "Asia"
   },
   {
     "name": "Gibraltar",
     "iso_3166_1_alpha_3": "GIB",
-    "flag": "gib"
+    "flag": "gib",
+    "continent": "Europe"
   },
   {
     "name": "Denmark",
     "iso_3166_1_alpha_3": "DNK",
-    "flag": "dnk"
+    "flag": "dnk",
+    "continent": "Europe"
   },
   {
     "name": "Cameroon",
     "iso_3166_1_alpha_3": "CMR",
-    "flag": "cmr"
+    "flag": "cmr",
+    "continent": "Africa"
   },
   {
     "name": "Guinea",
     "iso_3166_1_alpha_3": "GIN",
-    "flag": "gin"
+    "flag": "gin",
+    "continent": "Africa"
   },
   {
     "name": "Bahrain",
     "iso_3166_1_alpha_3": "BHR",
-    "flag": "bhr"
+    "flag": "bhr",
+    "continent": "Asia"
   },
   {
     "name": "Suriname",
     "iso_3166_1_alpha_3": "SUR",
-    "flag": "sur"
+    "flag": "sur",
+    "continent": "South America"
   },
   {
     "name": "DR Congo",
     "iso_3166_1_alpha_3": "COD",
-    "flag": "cod"
+    "flag": "cod",
+    "continent": "Africa"
   },
   {
     "name": "Somalia",
     "iso_3166_1_alpha_3": "SOM",
-    "flag": "som"
+    "flag": "som",
+    "continent": "Africa"
   },
   {
     "name": "Czechia",
     "iso_3166_1_alpha_3": "CZE",
-    "flag": "cze"
+    "flag": "cze",
+    "continent": "Europe"
   },
   {
     "name": "New Caledonia",
     "iso_3166_1_alpha_3": "NCL",
-    "flag": "ncl"
+    "flag": "ncl",
+    "continent": "Oceania"
   },
   {
     "name": "Vanuatu",
     "iso_3166_1_alpha_3": "VUT",
-    "flag": "vut"
+    "flag": "vut",
+    "continent": "Oceania"
   },
   {
     "name": "Saint Helena, Ascension and Tristan da Cunha",
     "iso_3166_1_alpha_3": "SHN",
-    "flag": "shn"
+    "flag": "shn",
+    "continent": "Africa"
   },
   {
     "name": "Togo",
     "iso_3166_1_alpha_3": "TGO",
-    "flag": "tgo"
+    "flag": "tgo",
+    "continent": "Africa"
   },
   {
     "name": "British Virgin Islands",
     "iso_3166_1_alpha_3": "VGB",
-    "flag": "vgb"
+    "flag": "vgb",
+    "continent": "North America"
   },
   {
     "name": "Kenya",
     "iso_3166_1_alpha_3": "KEN",
-    "flag": "ken"
+    "flag": "ken",
+    "continent": "Africa"
   },
   {
     "name": "Niue",
     "iso_3166_1_alpha_3": "NIU",
-    "flag": "niu"
+    "flag": "niu",
+    "continent": "Oceania"
   },
   {
     "name": "Heard Island and McDonald Islands",
     "iso_3166_1_alpha_3": "HMD",
-    "flag": "hmd"
+    "flag": "hmd",
+    "continent": "Antarctica"
   },
   {
     "name": "Rwanda",
     "iso_3166_1_alpha_3": "RWA",
-    "flag": "rwa"
+    "flag": "rwa",
+    "continent": "Africa"
   },
   {
     "name": "Estonia",
     "iso_3166_1_alpha_3": "EST",
-    "flag": "est"
+    "flag": "est",
+    "continent": "Europe"
   },
   {
     "name": "Romania",
     "iso_3166_1_alpha_3": "ROU",
-    "flag": "rou"
+    "flag": "rou",
+    "continent": "Europe"
   },
   {
     "name": "Trinidad and Tobago",
     "iso_3166_1_alpha_3": "TTO",
-    "flag": "tto"
+    "flag": "tto",
+    "continent": "North America"
   },
   {
     "name": "Guyana",
     "iso_3166_1_alpha_3": "GUY",
-    "flag": "guy"
+    "flag": "guy",
+    "continent": "South America"
   },
   {
     "name": "Timor-Leste",
     "iso_3166_1_alpha_3": "TLS",
-    "flag": "tls"
+    "flag": "tls",
+    "continent": "Asia"
   },
   {
     "name": "Vietnam",
     "iso_3166_1_alpha_3": "VNM",
-    "flag": "vnm"
+    "flag": "vnm",
+    "continent": "Asia"
   },
   {
     "name": "Uruguay",
     "iso_3166_1_alpha_3": "URY",
-    "flag": "ury"
+    "flag": "ury",
+    "continent": "South America"
   },
   {
     "name": "Vatican City",
     "iso_3166_1_alpha_3": "VAT",
-    "flag": "vat"
+    "flag": "vat",
+    "continent": "Europe"
   },
   {
     "name": "Hong Kong",
     "iso_3166_1_alpha_3": "HKG",
-    "flag": "hkg"
+    "flag": "hkg",
+    "continent": "Asia"
   },
   {
     "name": "Austria",
     "iso_3166_1_alpha_3": "AUT",
-    "flag": "aut"
+    "flag": "aut",
+    "continent": "Europe"
   },
   {
     "name": "Antigua and Barbuda",
     "iso_3166_1_alpha_3": "ATG",
-    "flag": "atg"
+    "flag": "atg",
+    "continent": "North America"
   },
   {
     "name": "Turkmenistan",
     "iso_3166_1_alpha_3": "TKM",
-    "flag": "tkm"
+    "flag": "tkm",
+    "continent": "Asia"
   },
   {
     "name": "Mozambique",
     "iso_3166_1_alpha_3": "MOZ",
-    "flag": "moz"
+    "flag": "moz",
+    "continent": "Africa"
   },
   {
     "name": "Panama",
     "iso_3166_1_alpha_3": "PAN",
-    "flag": "pan"
+    "flag": "pan",
+    "continent": "North America"
   },
   {
     "name": "Micronesia",
     "iso_3166_1_alpha_3": "FSM",
-    "flag": "fsm"
+    "flag": "fsm",
+    "continent": "Oceania"
   },
   {
     "name": "Ireland",
     "iso_3166_1_alpha_3": "IRL",
-    "flag": "irl"
+    "flag": "irl",
+    "continent": "Europe"
   },
   {
     "name": "Curaçao",
     "iso_3166_1_alpha_3": "CUW",
-    "flag": "cuw"
+    "flag": "cuw",
+    "continent": "North America"
   },
   {
     "name": "French Guiana",
     "iso_3166_1_alpha_3": "GUF",
-    "flag": "guf"
+    "flag": "guf",
+    "continent": "South America"
   },
   {
     "name": "Norway",
     "iso_3166_1_alpha_3": "NOR",
-    "flag": "nor"
+    "flag": "nor",
+    "continent": "Europe"
   },
   {
     "name": "Åland Islands",
     "iso_3166_1_alpha_3": "ALA",
-    "flag": "ala"
+    "flag": "ala",
+    "continent": "Europe"
   },
   {
     "name": "Central African Republic",
     "iso_3166_1_alpha_3": "CAF",
-    "flag": "caf"
+    "flag": "caf",
+    "continent": "Africa"
   },
   {
     "name": "Burkina Faso",
     "iso_3166_1_alpha_3": "BFA",
-    "flag": "bfa"
+    "flag": "bfa",
+    "continent": "Africa"
   },
   {
     "name": "Eritrea",
     "iso_3166_1_alpha_3": "ERI",
-    "flag": "eri"
+    "flag": "eri",
+    "continent": "Africa"
   },
   {
     "name": "Tanzania",
     "iso_3166_1_alpha_3": "TZA",
-    "flag": "tza"
+    "flag": "tza",
+    "continent": "Africa"
   },
   {
     "name": "South Korea",
     "iso_3166_1_alpha_3": "KOR",
-    "flag": "kor"
+    "flag": "kor",
+    "continent": "Asia"
   },
   {
     "name": "Jordan",
     "iso_3166_1_alpha_3": "JOR",
-    "flag": "jor"
+    "flag": "jor",
+    "continent": "Asia"
   },
   {
     "name": "Mauritania",
     "iso_3166_1_alpha_3": "MRT",
-    "flag": "mrt"
+    "flag": "mrt",
+    "continent": "Africa"
   },
   {
     "name": "Lithuania",
     "iso_3166_1_alpha_3": "LTU",
-    "flag": "ltu"
+    "flag": "ltu",
+    "continent": "Europe"
   },
   {
     "name": "United States Minor Outlying Islands",
     "iso_3166_1_alpha_3": "UMI",
-    "flag": "umi"
+    "flag": "umi",
+    "continent": "Oceania"
   },
   {
     "name": "Slovakia",
     "iso_3166_1_alpha_3": "SVK",
-    "flag": "svk"
+    "flag": "svk",
+    "continent": "Europe"
   },
   {
     "name": "Angola",
     "iso_3166_1_alpha_3": "AGO",
-    "flag": "ago"
+    "flag": "ago",
+    "continent": "Africa"
   },
   {
     "name": "Kazakhstan",
     "iso_3166_1_alpha_3": "KAZ",
-    "flag": "kaz"
+    "flag": "kaz",
+    "continent": "Asia"
   },
   {
     "name": "Moldova",
     "iso_3166_1_alpha_3": "MDA",
-    "flag": "mda"
+    "flag": "mda",
+    "continent": "Europe"
   },
   {
     "name": "Mali",
     "iso_3166_1_alpha_3": "MLI",
-    "flag": "mli"
+    "flag": "mli",
+    "continent": "Africa"
   },
   {
     "name": "Falkland Islands",
     "iso_3166_1_alpha_3": "FLK",
-    "flag": "flk"
+    "flag": "flk",
+    "continent": "South America"
   },
   {
     "name": "Armenia",
     "iso_3166_1_alpha_3": "ARM",
-    "flag": "arm"
+    "flag": "arm",
+    "continent": "Asia"
   },
   {
     "name": "Samoa",
     "iso_3166_1_alpha_3": "WSM",
-    "flag": "wsm"
+    "flag": "wsm",
+    "continent": "Oceania"
   },
   {
     "name": "Jersey",
     "iso_3166_1_alpha_3": "JEY",
-    "flag": "jey"
+    "flag": "jey",
+    "continent": "Europe"
   },
   {
     "name": "Japan",
     "iso_3166_1_alpha_3": "JPN",
-    "flag": "jpn"
+    "flag": "jpn",
+    "continent": "Asia"
   },
   {
     "name": "Bolivia",
     "iso_3166_1_alpha_3": "BOL",
-    "flag": "bol"
+    "flag": "bol",
+    "continent": "South America"
   },
   {
     "name": "Chile",
     "iso_3166_1_alpha_3": "CHL",
-    "flag": "chl"
+    "flag": "chl",
+    "continent": "South America"
   },
   {
     "name": "United States",
     "iso_3166_1_alpha_3": "USA",
-    "flag": "usa"
+    "flag": "usa",
+    "continent": "North America"
   },
   {
     "name": "Saint Vincent and the Grenadines",
     "iso_3166_1_alpha_3": "VCT",
-    "flag": "vct"
+    "flag": "vct",
+    "continent": "North America"
   },
   {
     "name": "Bermuda",
     "iso_3166_1_alpha_3": "BMU",
-    "flag": "bmu"
+    "flag": "bmu",
+    "continent": "North America"
   },
   {
     "name": "Seychelles",
     "iso_3166_1_alpha_3": "SYC",
-    "flag": "syc"
+    "flag": "syc",
+    "continent": "Africa"
   },
   {
     "name": "British Indian Ocean Territory",
     "iso_3166_1_alpha_3": "IOT",
-    "flag": "iot"
+    "flag": "iot",
+    "continent": "Asia"
   },
   {
     "name": "Guatemala",
     "iso_3166_1_alpha_3": "GTM",
-    "flag": "gtm"
+    "flag": "gtm",
+    "continent": "South America"
   },
   {
     "name": "Ecuador",
     "iso_3166_1_alpha_3": "ECU",
-    "flag": "ecu"
+    "flag": "ecu",
+    "continent": "South America"
   },
   {
     "name": "Martinique",
     "iso_3166_1_alpha_3": "MTQ",
-    "flag": "mtq"
+    "flag": "mtq",
+    "continent": "North America"
   },
   {
     "name": "Tajikistan",
     "iso_3166_1_alpha_3": "TJK",
-    "flag": "tjk"
+    "flag": "tjk",
+    "continent": "Asia"
   },
   {
     "name": "Malta",
     "iso_3166_1_alpha_3": "MLT",
-    "flag": "mlt"
+    "flag": "mlt",
+    "continent": "Europe"
   },
   {
     "name": "Gambia",
     "iso_3166_1_alpha_3": "GMB",
-    "flag": "gmb"
+    "flag": "gmb",
+    "continent": "Africa"
   },
   {
     "name": "Nigeria",
     "iso_3166_1_alpha_3": "NGA",
-    "flag": "nga"
+    "flag": "nga",
+    "continent": "Africa"
   },
   {
     "name": "Bahamas",
     "iso_3166_1_alpha_3": "BHS",
-    "flag": "bhs"
+    "flag": "bhs",
+    "continent": "North America"
   },
   {
     "name": "Kosovo",
     "iso_3166_1_alpha_3": "UNK",
-    "flag": "unk"
+    "flag": "unk",
+    "continent": "Europe"
   },
   {
     "name": "Kuwait",
     "iso_3166_1_alpha_3": "KWT",
-    "flag": "kwt"
+    "flag": "kwt",
+    "continent": "Asia"
   },
   {
     "name": "Maldives",
     "iso_3166_1_alpha_3": "MDV",
-    "flag": "mdv"
+    "flag": "mdv",
+    "continent": "Asia"
   },
   {
     "name": "South Sudan",
     "iso_3166_1_alpha_3": "SSD",
-    "flag": "ssd"
+    "flag": "ssd",
+    "continent": "Africa"
   },
   {
     "name": "Iran",
     "iso_3166_1_alpha_3": "IRN",
-    "flag": "irn"
+    "flag": "irn",
+    "continent": "Asia"
   },
   {
     "name": "Albania",
     "iso_3166_1_alpha_3": "ALB",
-    "flag": "alb"
+    "flag": "alb",
+    "continent": "Europe"
   },
   {
     "name": "Brazil",
     "iso_3166_1_alpha_3": "BRA",
-    "flag": "bra"
+    "flag": "bra",
+    "continent": "South America"
   },
   {
     "name": "Serbia",
     "iso_3166_1_alpha_3": "SRB",
-    "flag": "srb"
+    "flag": "srb",
+    "continent": "Europe"
   },
   {
     "name": "Belize",
     "iso_3166_1_alpha_3": "BLZ",
-    "flag": "blz"
+    "flag": "blz",
+    "continent": "South America"
   },
   {
     "name": "Myanmar",
     "iso_3166_1_alpha_3": "MMR",
-    "flag": "mmr"
+    "flag": "mmr",
+    "continent": "Asia"
   },
   {
     "name": "Bhutan",
     "iso_3166_1_alpha_3": "BTN",
-    "flag": "btn"
+    "flag": "btn",
+    "continent": "Asia"
   },
   {
     "name": "Venezuela",
     "iso_3166_1_alpha_3": "VEN",
-    "flag": "ven"
+    "flag": "ven",
+    "continent": "South America"
   },
   {
     "name": "Liberia",
     "iso_3166_1_alpha_3": "LBR",
-    "flag": "lbr"
+    "flag": "lbr",
+    "continent": "Africa"
   },
   {
     "name": "Jamaica",
     "iso_3166_1_alpha_3": "JAM",
-    "flag": "jam"
+    "flag": "jam",
+    "continent": "South America"
   },
   {
     "name": "Poland",
     "iso_3166_1_alpha_3": "POL",
-    "flag": "pol"
+    "flag": "pol",
+    "continent": "Europe"
   },
   {
     "name": "Cayman Islands",
     "iso_3166_1_alpha_3": "CYM",
-    "flag": "cym"
+    "flag": "cym",
+    "continent": "North America"
   },
   {
     "name": "Brunei",
     "iso_3166_1_alpha_3": "BRN",
-    "flag": "brn"
+    "flag": "brn",
+    "continent": "Asia"
   },
   {
     "name": "Comoros",
     "iso_3166_1_alpha_3": "COM",
-    "flag": "com"
+    "flag": "com",
+    "continent": "Africa"
   },
   {
     "name": "Guam",
     "iso_3166_1_alpha_3": "GUM",
-    "flag": "gum"
+    "flag": "gum",
+    "continent": "Oceania"
   },
   {
     "name": "Tonga",
     "iso_3166_1_alpha_3": "TON",
-    "flag": "ton"
+    "flag": "ton",
+    "continent": "Oceania"
   },
   {
     "name": "Kiribati",
     "iso_3166_1_alpha_3": "KIR",
-    "flag": "kir"
+    "flag": "kir",
+    "continent": "Oceania"
   },
   {
     "name": "Ghana",
     "iso_3166_1_alpha_3": "GHA",
-    "flag": "gha"
+    "flag": "gha",
+    "continent": "Africa"
   },
   {
     "name": "Chad",
     "iso_3166_1_alpha_3": "TCD",
-    "flag": "tcd"
+    "flag": "tcd",
+    "continent": "Africa"
   },
   {
     "name": "Zimbabwe",
     "iso_3166_1_alpha_3": "ZWE",
-    "flag": "zwe"
+    "flag": "zwe",
+    "continent": "Africa"
   },
   {
     "name": "Saint Martin",
     "iso_3166_1_alpha_3": "MAF",
-    "flag": "maf"
+    "flag": "maf",
+    "continent": "North America"
   },
   {
     "name": "Mongolia",
     "iso_3166_1_alpha_3": "MNG",
-    "flag": "mng"
+    "flag": "mng",
+    "continent": "Asia"
   },
   {
     "name": "Portugal",
     "iso_3166_1_alpha_3": "PRT",
-    "flag": "prt"
+    "flag": "prt",
+    "continent": "Europe"
   },
   {
     "name": "American Samoa",
     "iso_3166_1_alpha_3": "ASM",
-    "flag": "asm"
+    "flag": "asm",
+    "continent": "Oceania"
   },
   {
-    "name": "Republic of the Congo",
+    "name": "Democratic Republic of Congo",
     "iso_3166_1_alpha_3": "COG",
-    "flag": "cog"
+    "flag": "cog",
+    "continent": "Africa"
   },
   {
     "name": "Belgium",
     "iso_3166_1_alpha_3": "BEL",
-    "flag": "bel"
+    "flag": "bel",
+    "continent": "Europe"
   },
   {
     "name": "Israel",
     "iso_3166_1_alpha_3": "ISR",
-    "flag": "isr"
+    "flag": "isr",
+    "continent": "Asia"
   },
   {
     "name": "New Zealand",
     "iso_3166_1_alpha_3": "NZL",
-    "flag": "nzl"
+    "flag": "nzl",
+    "continent": "Oceania"
   },
   {
     "name": "Nicaragua",
     "iso_3166_1_alpha_3": "NIC",
-    "flag": "nic"
+    "flag": "nic",
+    "continent": "North America"
   },
   {
     "name": "Anguilla",
     "iso_3166_1_alpha_3": "AIA",
-    "flag": "aia"
+    "flag": "aia",
+    "continent": "North America"
   }
 ]
