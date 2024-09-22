@@ -2,7 +2,6 @@ import React, { useState, useRef, useMemo, useEffect } from 'react';
 import MapboxGL from '@rnmapbox/maps';
 import { MapView, Camera, VectorSource, FillLayer } from '@rnmapbox/maps';
 import BottomSheet from '@gorhom/bottom-sheet';
-import { StyleSheet } from 'react-native';
 import countries from '../assets/countries.json';
 import BottomSheetContent from './BottomSheetContent';
 import { getUserData } from '~/services/authService';
@@ -17,8 +16,25 @@ import {
 
 MapboxGL.setAccessToken(process.env.EXPO_PUBLIC_MAPBOX_KEY || '');
 
+interface Country {
+  country_code: string;
+  name: string;
+}
+
+interface GeoJsonFeature {
+  type: 'Feature';
+  properties: {
+    iso_3166_1_alpha_3: string;
+    [key: string]: any;
+  };
+  geometry: {
+    type: string;
+    coordinates: number[] | number[][] | number[][][];
+  };
+}
+
 const Map = () => {
-  const [selectedCountry, setSelectedCountry] = useState(null);
+  const [selectedCountry, setSelectedCountry] = useState<GeoJsonFeature | null>(null);
   const [visitedCountries, setVisitedCountries] = useState<string[]>([]);
   const [wantToVisitCountries, setWantToVisitCountries] = useState<string[]>([]);
 
@@ -39,8 +55,8 @@ const Map = () => {
           const wishlistResponse = await getWantToVisitCountries(userId);
 
           // Extract country codes
-          setVisitedCountries(visitedResponse.map((country) => country.country_code));
-          setWantToVisitCountries(wishlistResponse.map((country) => country.country_code));
+          setVisitedCountries(visitedResponse.map((country: Country) => country.country_code));
+          setWantToVisitCountries(wishlistResponse.map((country: Country) => country.country_code));
         }
       } catch (error) {
         console.error('Error fetching country data:', error);
@@ -50,7 +66,7 @@ const Map = () => {
     fetchCountryData();
   }, []);
 
-  const handleCountrySelection = async (event) => {
+  const handleCountrySelection = async (event: any) => {
     // ! return later
     const { properties } = event;
     if (!properties || !mapRef.current) return;
@@ -63,7 +79,8 @@ const Map = () => {
     );
 
     if (features?.features?.length) {
-      setSelectedCountry(features.features[0]); // ! return later
+      const feature = features.features[0] as GeoJsonFeature;
+      setSelectedCountry(feature);
       bottomSheetRef.current?.expand();
     }
   };
@@ -110,7 +127,7 @@ const Map = () => {
       <MapView
         ref={mapRef}
         style={{ flex: 1 }}
-        styleURL="mapbox://styles/mapbox/light-v11"
+        styleURL="mapbox://styles/ilyaono/cm17nfsaa026w01o37wziemoa"
         onPress={handleCountrySelection}>
         <Camera followZoomLevel={8} centerCoordinate={[0, 20]} />
         <VectorSource id="countrySource" url="mapbox://mapbox.country-boundaries-v1">
