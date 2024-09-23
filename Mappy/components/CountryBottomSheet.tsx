@@ -21,10 +21,14 @@ const CountryBottomSheet: React.FC<CountryBottomSheetProps> = ({
 }) => {
   const bottomSheetRef = useRef<BottomSheet>(null);
 
-  const snapPoints = useMemo(() => ['50%', '75%', '90%'], []); 
+  const snapPoints = useMemo(() => ['50%', '75%'], []);
 
   return (
-    <BottomSheet ref={bottomSheetRef} index={1} snapPoints={snapPoints} enablePanDownToClose={false}>
+    <BottomSheet
+      ref={bottomSheetRef}
+      index={1}
+      snapPoints={snapPoints}
+      enablePanDownToClose={false}>
       <View style={styles.bottomSheetContent}>
         <CountryToggle showVisited={showVisited} onToggle={onToggle} />
         <CountryList
