@@ -14,17 +14,17 @@ import {
 
 export default function Home() {
   const { visitedCountries, wishlistCountries, setVisitedCountries, setWishlistCountries } =
-    useCountryContext(); 
+    useCountryContext();
 
   const updateCountryStatus = async (isoCode: string, listType: 'visited' | 'wishlist') => {
-    const userData = await getUserData(); 
+    const userData = await getUserData();
     if (!userData || !userData.id) return;
 
     const userId = userData.id;
 
     try {
       console.log('Updating status for:', isoCode, 'List type:', listType);
-      console.log('Before update:', visitedCountries, wishlistCountries); 
+      console.log('Before update:', visitedCountries, wishlistCountries);
       if (listType === 'visited') {
         if (visitedCountries.includes(isoCode)) {
           await removeVisitedCountry(userId, isoCode); // Remove from visited in backend
@@ -49,23 +49,23 @@ export default function Home() {
 
   useEffect(() => {
     const fetchCountryData = async () => {
-      const userData = await getUserData(); 
+      const userData = await getUserData();
       if (!userData || !userData.id) return;
-  
+
       const userId = userData.id;
-  
+
       try {
         const visitedResponse = await getVisitedCountry(userId);
         const wishlistResponse = await getWantToVisitCountries(userId);
-  
+
         setVisitedCountries(visitedResponse.map((country: any) => country.country_code));
         setWishlistCountries(wishlistResponse.map((country: any) => country.country_code));
       } catch (error) {
         console.error('Error fetching country data:', error);
       }
     };
-  
-    fetchCountryData(); 
+
+    fetchCountryData();
   }, [setVisitedCountries, setWishlistCountries]);
 
   return (
@@ -73,7 +73,7 @@ export default function Home() {
       <Map
         visitedCountries={visitedCountries}
         wishlistCountries={wishlistCountries}
-        updateCountryStatus={updateCountryStatus} 
+        updateCountryStatus={updateCountryStatus}
       />
     </GestureHandlerRootView>
   );
