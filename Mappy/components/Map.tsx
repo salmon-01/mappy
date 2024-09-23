@@ -4,6 +4,7 @@ import { MapView, Camera, VectorSource, FillLayer } from '@rnmapbox/maps';
 import BottomSheet from '@gorhom/bottom-sheet';
 import countries from '../assets/countries.json';
 import BottomSheetContent from './BottomSheetContent';
+import { useCountryContext } from '~/context/CountryContext';
 
 MapboxGL.setAccessToken(process.env.EXPO_PUBLIC_MAPBOX_KEY || '');
 
@@ -26,11 +27,11 @@ interface MapProps {
 }
 
 const Map: React.FC<MapProps> = ({ visitedCountries, wishlistCountries, updateCountryStatus }) => {
-  const [selectedCountry, setSelectedCountry] = useState<GeoJsonFeature | null>(null);
+  const { setSelectedCountry, selectedCountry } = useCountryContext();
   const mapRef = useRef<MapboxGL.MapView>(null);
   const bottomSheetRef = useRef<BottomSheet>(null);
 
-  const snapPoints = useMemo(() => ['25%'], []);
+  const snapPoints = useMemo(() => ['26%'], []);
 
   const handleCountrySelection = async (event: any) => {
     const { properties } = event;
@@ -55,6 +56,10 @@ const Map: React.FC<MapProps> = ({ visitedCountries, wishlistCountries, updateCo
     return country?.name || 'Unknown Country';
   };
 
+  const handleCloseBottomSheet = () => {
+    setSelectedCountry(null);
+  };
+
   return (
     <>
       <MapView
@@ -71,24 +76,29 @@ const Map: React.FC<MapProps> = ({ visitedCountries, wishlistCountries, updateCo
               fillColor: [
                 'case',
                 ['in', ['get', 'iso_3166_1_alpha_3'], ['literal', visitedCountries]],
-                '#0000FF',
+                '#5438DC',
                 ['in', ['get', 'iso_3166_1_alpha_3'], ['literal', wishlistCountries]],
-                '#FFA500',
+                '#7CFFC4',
                 '#CCCCCC',
               ],
               fillOpacity: [
                 'case',
                 ['in', ['get', 'iso_3166_1_alpha_3'], ['literal', visitedCountries]],
-                0.5,
+                0.7,
                 ['in', ['get', 'iso_3166_1_alpha_3'], ['literal', wishlistCountries]],
-                0.5,
+                0.7,
                 0,
               ],
             }}
           />
         </VectorSource>
       </MapView>
-      <BottomSheet ref={bottomSheetRef} index={-1} snapPoints={snapPoints} enablePanDownToClose>
+      <BottomSheet
+        ref={bottomSheetRef}
+        index={-1}
+        snapPoints={snapPoints}
+        enablePanDownToClose
+        onClose={handleCloseBottomSheet}>
         <BottomSheetContent
           selectedCountry={selectedCountry}
           visitedCountries={visitedCountries}
