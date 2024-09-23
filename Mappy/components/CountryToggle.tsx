@@ -32,6 +32,7 @@ const CountryToggle: React.FC<CountryToggleProps> = ({ showVisited, onToggle }) 
         <Animated.View
           style={[styles.toggleSlider, { transform: [{ translateX }], width: buttonWidth }]}
         />
+
         <TouchableOpacity style={styles.toggleButton} onPress={() => onToggle(true)}>
           <Text
             style={[
@@ -41,6 +42,7 @@ const CountryToggle: React.FC<CountryToggleProps> = ({ showVisited, onToggle }) 
             Visited
           </Text>
         </TouchableOpacity>
+
         <TouchableOpacity style={styles.toggleButton} onPress={() => onToggle(false)}>
           <Text
             style={[
@@ -50,6 +52,7 @@ const CountryToggle: React.FC<CountryToggleProps> = ({ showVisited, onToggle }) 
             Want to Visit
           </Text>
         </TouchableOpacity>
+        
       </View>
     </View>
   );
