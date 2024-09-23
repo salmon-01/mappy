@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 interface StatsProps {
@@ -6,23 +6,46 @@ interface StatsProps {
   percentageOfWorld?: string;
   regionsVisited?: number;
   totalRegions?: number;
-  favoriteRegion?: string; // Only used for "Want to Visit"
+  favoriteRegion?: string;
 }
 
-const Stats: React.FC<StatsProps> = ({ totalVisited, percentageOfWorld, regionsVisited, totalRegions, favoriteRegion }) => {
+const Stats: React.FC<StatsProps> = ({
+  totalVisited,
+  percentageOfWorld,
+  regionsVisited,
+  totalRegions,
+  favoriteRegion,
+}) => {
   return (
     <View style={styles.statsContainer}>
       {favoriteRegion ? (
-        <>
-          <Text style={styles.statText}>{totalVisited} countries</Text>
-          <Text style={styles.statText}>{favoriteRegion} favourite region</Text>
-        </>
+        <View style={styles.statGroupContainer}>
+          <View style={styles.statGroup}>
+            <Text style={styles.largeStatText}>{totalVisited}</Text>
+            <Text style={styles.smallStatText}>countries</Text>
+          </View>
+          <View style={styles.statGroup}>
+            <Text style={styles.largeStatText}>{favoriteRegion}</Text>
+            <Text style={styles.smallStatText}>favourite region</Text>
+          </View>
+        </View>
       ) : (
-        <>
-          <Text style={styles.statText}>{totalVisited}/195 countries</Text>
-          <Text style={styles.statText}>{percentageOfWorld}% of the world</Text>
-          <Text style={styles.statText}>{regionsVisited}/{totalRegions} regions</Text>
-        </>
+        <View style={styles.statGroupContainer}>
+          <View style={styles.statGroup}>
+            <Text style={styles.largeStatText}>{totalVisited}/195</Text>
+            <Text style={styles.smallStatText}>countries</Text>
+          </View>
+          <View style={styles.statGroup}>
+            <Text style={styles.largeStatText}>{percentageOfWorld}%</Text>
+            <Text style={styles.smallStatText}>of the world</Text>
+          </View>
+          <View style={styles.statGroup}>
+            <Text style={styles.largeStatText}>
+              {regionsVisited}/{totalRegions}
+            </Text>
+            <Text style={styles.smallStatText}>regions visited</Text>
+          </View>
+        </View>
       )}
     </View>
   );
@@ -30,15 +53,28 @@ const Stats: React.FC<StatsProps> = ({ totalVisited, percentageOfWorld, regionsV
 
 const styles = StyleSheet.create({
   statsContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     marginBottom: 20,
   },
-  statText: {
-    fontSize: 16,
+  statGroupContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '100%',
+  },
+  statGroup: {
+    alignItems: 'center',
+  },
+  largeStatText: {
+    fontSize: 24,
     fontWeight: 'bold',
+    color: '#333333',
+  },
+  smallStatText: {
+    fontSize: 14,
+    color: '#333333',
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
 
-
-export default Stats
+export default Stats;
