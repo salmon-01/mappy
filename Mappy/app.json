@@ -24,7 +24,8 @@
         {
           "locationWhenInUsePermission": "Show current location on map."
         }
-      ]
+      ],
+      ["expo-apple-authentication"]
     ],
     "experiments": {
       "typedRoutes": true,
@@ -38,12 +39,11 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.Mappy"
+      "bundleIdentifier": "com.anonymous.Mappy",
+      "usesAppleSignIn": true
     },
     "android": {
       "adaptiveIcon": {

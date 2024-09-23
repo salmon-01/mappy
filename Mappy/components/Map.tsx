@@ -7,11 +7,6 @@ import BottomSheetContent from './BottomSheetContent';
 
 MapboxGL.setAccessToken(process.env.EXPO_PUBLIC_MAPBOX_KEY || '');
 
-interface Country {
-  country_code: string;
-  name: string;
-}
-
 interface GeoJsonFeature {
   type: 'Feature';
   properties: {
@@ -42,7 +37,11 @@ const Map: React.FC<MapProps> = ({ visitedCountries, wishlistCountries, updateCo
     if (!properties || !mapRef.current) return;
 
     const { screenPointX, screenPointY } = properties;
-    const features = await mapRef.current.queryRenderedFeaturesAtPoint([screenPointX, screenPointY], undefined, ['country-fill']);
+    const features = await mapRef.current.queryRenderedFeaturesAtPoint(
+      [screenPointX, screenPointY],
+      undefined,
+      ['country-fill']
+    );
 
     if (features?.features?.length) {
       const feature = features.features[0] as GeoJsonFeature;
@@ -61,7 +60,7 @@ const Map: React.FC<MapProps> = ({ visitedCountries, wishlistCountries, updateCo
       <MapView
         ref={mapRef}
         style={{ flex: 1 }}
-        styleURL="mapbox://styles/ilyaono/cm17nfsaa026w01o37wziemoa"
+        styleURL="mapbox://styles/ilyaono/cm1e2ygtf02gg01pidqrc5gxt"
         onPress={handleCountrySelection}>
         <Camera followZoomLevel={8} centerCoordinate={[0, 20]} />
         <VectorSource id="countrySource" url="mapbox://mapbox.country-boundaries-v1">
@@ -80,10 +79,10 @@ const Map: React.FC<MapProps> = ({ visitedCountries, wishlistCountries, updateCo
               fillOpacity: [
                 'case',
                 ['in', ['get', 'iso_3166_1_alpha_3'], ['literal', visitedCountries]],
-                0.5, 
+                0.5,
                 ['in', ['get', 'iso_3166_1_alpha_3'], ['literal', wishlistCountries]],
-                0.5, 
-                0, 
+                0.5,
+                0,
               ],
             }}
           />

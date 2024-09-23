@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import CountryFlag from './CountryFlag';
 
 interface BottomSheetContentProps {
   selectedCountry: GeoJsonFeature | null;
@@ -11,15 +12,15 @@ interface BottomSheetContentProps {
 
 const BottomSheetContent: React.FC<BottomSheetContentProps> = ({
   selectedCountry,
-  visitedCountries = [], 
-  wishlistCountries = [], 
+  visitedCountries = [],
+  wishlistCountries = [],
   getCountryName,
   updateCountryStatus,
 }) => {
   if (!selectedCountry) return <Text>Select a country</Text>;
 
   const isoCode = selectedCountry.properties.iso_3166_1_alpha_3;
-  const isVisited = visitedCountries.includes(isoCode); 
+  const isVisited = visitedCountries.includes(isoCode);
   const isWishlist = wishlistCountries.includes(isoCode);
 
   return (
@@ -60,6 +61,11 @@ const styles = StyleSheet.create({
   },
   disabledText: {
     color: 'gray',
+  },
+  flag: {
+    width: 40,
+    height: 25,
+    marginRight: 10,
   },
 });
 
