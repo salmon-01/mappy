@@ -20,18 +20,20 @@ const UserProfile: React.FC<UserProfileProps> = ({ username, avatar, onPress }) 
 
 const styles = StyleSheet.create({
   profileSection: {
+    flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 20,
   },
   avatar: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    marginBottom: 10,
+    width: 64,
+    height: 64,
+    borderRadius: 30,
+    marginRight: 10,
   },
   username: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 'bold',
+    color: '#333333',
   },
 });
 
