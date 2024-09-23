@@ -16,15 +16,16 @@ const LoginButton: React.FC<LoginButtonProps> = ({ provider, onPress }) => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#007AFF',
-    padding: 15,
-    borderRadius: 8,
+    backgroundColor: '#E8F1F9',
+    padding: 16,
+    borderRadius: 25,
     marginVertical: 10,
-    width: '80%',
+    width: '85%',
     alignItems: 'center',
   },
   buttonText: {
-    color: '#fff',
+    color: '#333333',
+    fontWeight: 700,
     fontSize: 16,
   },
 });
