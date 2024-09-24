@@ -4,6 +4,7 @@ import AvatarPicker from '~/components/AvatarPicker';
 import UserInputForm from '~/components/UserInputForm';
 import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import ContinueButton from '~/components/ContinueButton';
 
 const WelcomeScreen = () => {
   const [username, setUsername] = useState('');
@@ -30,7 +31,7 @@ const WelcomeScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome</Text>
+      <Text style={styles.title}>Welcome 👋</Text>
       <UserInputForm
         username={username}
         setUsername={setUsername}
@@ -38,7 +39,7 @@ const WelcomeScreen = () => {
         setDisplayName={setDisplayName}
       />
       <AvatarPicker selectedAvatar={avatar} setAvatar={setAvatar} />
-      <Button title="Continue" onPress={handleContinue} />
+      <ContinueButton onPress={handleContinue} />
     </View>
   );
 };
@@ -47,12 +48,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    backgroundColor: '#5EBDE5',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
-    textAlign: 'center',
+    textAlign: 'left',
+    color: '#333333',
+    marginTop: 112
   },
 });
 
