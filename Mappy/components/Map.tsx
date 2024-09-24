@@ -1,4 +1,4 @@
-import React, { useState, useRef, useMemo } from 'react';
+import React, { useRef, useMemo } from 'react';
 import MapboxGL from '@rnmapbox/maps';
 import { MapView, Camera, VectorSource, FillLayer } from '@rnmapbox/maps';
 import BottomSheet from '@gorhom/bottom-sheet';
@@ -66,6 +66,7 @@ const Map: React.FC<MapProps> = ({ visitedCountries, wishlistCountries, updateCo
         ref={mapRef}
         style={{ flex: 1 }}
         styleURL="mapbox://styles/ilyaono/cm1e2ygtf02gg01pidqrc5gxt"
+        rotateEnabled={false}
         onPress={handleCountrySelection}>
         <Camera followZoomLevel={8} centerCoordinate={[0, 20]} />
         <VectorSource id="countrySource" url="mapbox://mapbox.country-boundaries-v1">
