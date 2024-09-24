@@ -2,7 +2,6 @@ import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useContext } from 'react';
 import { CountryProvider, CountryContext } from '~/context/CountryContext';
-import { View, StyleSheet } from 'react-native';
 
 export default function Layout() {
   return (
