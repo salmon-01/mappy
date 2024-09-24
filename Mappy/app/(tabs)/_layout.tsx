@@ -2,6 +2,7 @@ import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useContext } from 'react';
 import { CountryProvider, CountryContext } from '~/context/CountryContext';
+import { View, StyleSheet } from 'react-native';
 
 export default function Layout() {
   return (
@@ -38,28 +39,12 @@ function TabsWithConditionalTabBar() {
           marginBottom: 0,
           display: selectedCountry ? 'none' : 'flex',
         },
+        headerShown: false,
+        safeAreaInsets: { top: 0, bottom: 0 },
       })}>
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          headerShown: false,
-        }}
-      />
-      <Tabs.Screen
-        name="home"
-        options={{
-          title: 'Home',
-          headerShown: false,
-        }}
-      />
-      <Tabs.Screen
-        name="dashboard"
-        options={{
-          title: 'Dashboard',
-          headerShown: false,
-        }}
-      />
+      <Tabs.Screen name="explore" options={{ title: 'Explore' }} />
+      <Tabs.Screen name="home" options={{ title: 'Home' }} />
+      <Tabs.Screen name="dashboard" options={{ title: 'Dashboard' }} />
     </Tabs>
   );
 }

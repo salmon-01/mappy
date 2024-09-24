@@ -60,7 +60,6 @@ export const getUserData = async () => {
 export const clearAsyncStorage = async () => {
   try {
     await AsyncStorage.clear();
-    console.log('AsyncStorage cleared!');
   } catch (e) {
     console.error('Error clearing AsyncStorage:', e);
   }
