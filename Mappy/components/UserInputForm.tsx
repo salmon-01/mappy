@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TextInput, StyleSheet } from 'react-native';
+import { View, TextInput, StyleSheet, Text } from 'react-native';
 
 interface UserInputFormProps {
   username: string;
@@ -16,15 +16,17 @@ const UserInputForm: React.FC<UserInputFormProps> = ({
 }) => {
   return (
     <View>
+      <Text style={styles.text}>Username</Text>
       <TextInput
         style={styles.input}
-        placeholder="Username"
+        placeholder="Enter username"
         value={username}
         onChangeText={setUsername}
       />
+      <Text style={styles.text}>Display name</Text>
       <TextInput
         style={styles.input}
-        placeholder="Display Name"
+        placeholder="Enter display name"
         value={displayName}
         onChangeText={setDisplayName}
       />
@@ -34,11 +36,17 @@ const UserInputForm: React.FC<UserInputFormProps> = ({
 
 const styles = StyleSheet.create({
   input: {
-    borderWidth: 1,
-    borderColor: '#ccc',
-    padding: 10,
-    marginVertical: 10,
-    borderRadius: 8,
+    backgroundColor: '#F6F8FA',
+    padding: 16,
+    borderRadius: 25,
+    marginTop: 8,
+    marginBottom: 16
+  },
+  text: {
+    color: '#333333',
+    fontWeight: '600',
+    marginBottom: 6,
+    fontSize: 16
   },
 });
 
