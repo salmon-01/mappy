@@ -12,9 +12,9 @@ export default function SplashScreen() {
       const loggedIn = await isUserLoggedIn();
       
       if (loggedIn) {
-        router.push('/home'); // Redirect to home if logged in
+        router.push('/home'); 
       } else {
-        router.push('/auth/login'); // Redirect to login if not logged in
+        router.push('/auth/login'); 
       }
     };
 
