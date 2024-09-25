@@ -16,7 +16,7 @@ const SettingsSheet: React.FC<SettingsSheetProps> = ({
 }) => {
   return (
     <View style={styles.sheetContent}>
-      <Text style={styles.title}>salmon-01</Text>
+      <Text style={styles.title}>TestUser</Text>
       <View style={styles.optionContainer}>
         <Text style={styles.optionText}>Email</Text>
         <Text style={styles.optionText}>Username</Text>
