@@ -1,12 +1,12 @@
 import React, { useRef, useMemo } from 'react';
-import MapboxGL from '@rnmapbox/maps';
+import Mapbox from '@rnmapbox/maps';
 import { MapView, Camera, VectorSource, FillLayer } from '@rnmapbox/maps';
 import BottomSheet from '@gorhom/bottom-sheet';
 import countries from '../assets/countries.json';
 import BottomSheetContent from './BottomSheetContent';
 import { useCountryContext } from '~/context/CountryContext';
 
-MapboxGL.setAccessToken(process.env.EXPO_PUBLIC_MAPBOX_KEY || '');
+Mapbox.setAccessToken(process.env.EXPO_PUBLIC_MAPBOX_KEY || '');
 
 interface GeoJsonFeature {
   type: 'Feature';
@@ -28,10 +28,10 @@ interface MapProps {
 
 const Map: React.FC<MapProps> = ({ visitedCountries, wishlistCountries, updateCountryStatus }) => {
   const { setSelectedCountry, selectedCountry } = useCountryContext();
-  const mapRef = useRef<MapboxGL.MapView>(null);
+  const mapRef = useRef<Mapbox.MapView>(null);
   const bottomSheetRef = useRef<BottomSheet>(null);
 
-  const snapPoints = useMemo(() => ['26%'], []);
+  const snapPoints = useMemo(() => ['30%'], []);
 
   const handleCountrySelection = async (event: any) => {
     const { properties } = event;
