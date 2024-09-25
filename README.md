@@ -58,13 +58,17 @@ EXPO_PUBLIC_MAPBOX_KEY=your public mapbox key (ex.: pk.ey...)
 #### Back-end
 
 ``` cd server ```
+
 ``` npm i ```
+
 ``` nodemon index.js ```
 
 #### Front-end 
 
 ``` cd Mappy ```
+
 ``` npm i ```
+
 ``` npx expo start -c ```
 
 Switch to development build by entering ``` s ``` in the terminal, then enter ``` i ``` to load the iOS simulator
