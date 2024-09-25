@@ -21,7 +21,7 @@ const CountryBottomSheet: React.FC<CountryBottomSheetProps> = ({
 }) => {
   const bottomSheetRef = useRef<BottomSheet>(null);
 
-  const snapPoints = useMemo(() => ['50%', '75%'], []);
+  const snapPoints = useMemo(() => ['45%', '70%'], []);
 
   return (
     <BottomSheet
