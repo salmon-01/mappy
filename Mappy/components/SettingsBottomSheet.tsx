@@ -1,7 +1,6 @@
 import React from 'react';
-import { View } from 'react-native';
 import BottomSheet from '@gorhom/bottom-sheet';
-import SettingsSheet from './SettingsSheet'; // Your settings sheet component
+import SettingsSheet from './SettingsSheet';
 
 interface SettingsBottomSheetProps {
   isVisible: boolean;
@@ -11,14 +10,14 @@ interface SettingsBottomSheetProps {
   onDeleteAccount: () => void;
 }
 
-const SettingsBottomSheet: React.FC<SettingsBottomSheetProps> = ({
+const SettingsBottomSheet = ({
   isVisible,
   onClose,
   onClearMap,
   onLogout,
   onDeleteAccount,
-}) => {
-  const snapPoints = ['95%'];
+}: SettingsBottomSheetProps) => {
+  const snapPoints = ['90%'];
 
   return (
     <BottomSheet
