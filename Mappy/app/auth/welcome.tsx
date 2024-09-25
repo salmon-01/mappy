@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import AvatarPicker from '~/components/AvatarPicker';
 import UserInputForm from '~/components/UserInputForm';
 import { useRouter } from 'expo-router';
