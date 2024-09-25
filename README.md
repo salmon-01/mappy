@@ -35,7 +35,7 @@ git clone https://github.com/salmon-01/mappy.git
 ```
 
 #### For back-end environments:
-##### Create a .env file
+##### Create a .env file in server folder
 #
 ```sh
 SUPABASE_URL="your public supabase url"
@@ -43,7 +43,7 @@ SUPABASE_KEY="your public supabase key"
 ```
 
 #### For front-end environments:
-##### Create a .env file
+##### Create a .env file in Mappy folder
 #
 ```sh
 EXPO_PUBLIC_SUPABASE_URL="your public supabase url"
