@@ -52,7 +52,7 @@ EXPO_PUBLIC_MAPBOX_KEY=your public mapbox key (ex.: pk.ey...)
 ### Run the project
 
 > [!IMPORTANT]
-> Currently it is only possible to locally run the app with iOS simulator 
+> Currently it is only possible to locally run the app with iOS simulator.
 > Make sure you have latest version of XCode and CLI for project to run properly
 
 #### Back-end
