@@ -30,7 +30,9 @@ Mappy is an interactive map that lets you highlight the countries you have been 
 ## Installation
 
 #### Git clone this repo with
-``` git clone https://github.com/salmon-01/mappy.git ```
+``` 
+git clone https://github.com/salmon-01/mappy.git
+```
 
 #### For back-end environments:
 ##### Create a .env file
