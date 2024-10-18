@@ -5,26 +5,9 @@ import BottomSheet from '@gorhom/bottom-sheet';
 import countries from '../assets/countries.json';
 import BottomSheetContent from './BottomSheetContent';
 import { useCountryContext } from '~/context/CountryContext';
+import { GeoJsonFeature, MapProps } from '~/types';
 
 Mapbox.setAccessToken(process.env.EXPO_PUBLIC_MAPBOX_KEY || '');
-
-interface GeoJsonFeature {
-  type: 'Feature';
-  properties: {
-    iso_3166_1_alpha_3: string;
-    [key: string]: any;
-  };
-  geometry: {
-    type: string;
-    coordinates: number[] | number[][] | number[][][];
-  };
-}
-
-interface MapProps {
-  visitedCountries: string[];
-  wishlistCountries: string[];
-  updateCountryStatus: (isoCode: string, listType: 'visited' | 'wishlist') => Promise<void>;
-}
 
 const Map: React.FC<MapProps> = ({ visitedCountries, wishlistCountries, updateCountryStatus }) => {
   const { setSelectedCountry, selectedCountry } = useCountryContext();
