@@ -1,10 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
-
-interface LoginButtonProps {
-  provider: 'Google' | 'Apple';
-  onPress: () => void;
-}
+import { LoginButtonProps } from '~/types';
 
 const LoginButton: React.FC<LoginButtonProps> = ({ provider, onPress }) => {
   return (
