@@ -1,12 +1,6 @@
 import React from 'react';
 import { View, TextInput, StyleSheet, Text } from 'react-native';
-
-interface UserInputFormProps {
-  username: string;
-  setUsername: (value: string) => void;
-  displayName: string;
-  setDisplayName: (value: string) => void;
-}
+import { UserInputFormProps } from '~/types';
 
 const UserInputForm: React.FC<UserInputFormProps> = ({
   username,
