@@ -12,13 +12,19 @@ export default function Layout() {
 }
 
 function TabsWithConditionalTabBar() {
-  const { selectedCountry } = useContext(CountryContext);
+  const context = useContext(CountryContext);
+
+  if (!context) {
+    throw new Error('CountryContext must be used within a CountryProvider');
+  }
+
+  const { selectedCountry } = context;
 
   return (
     <Tabs
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
-          let iconName;
+          let iconName: keyof typeof Ionicons.glyphMap | undefined;
 
           if (route.name === 'home') {
             iconName = focused ? 'home' : 'home-outline';
