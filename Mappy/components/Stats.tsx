@@ -1,13 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-
-interface StatsProps {
-  totalVisited: number;
-  percentageOfWorld?: string;
-  regionsVisited?: number;
-  totalRegions?: number;
-  favoriteRegion?: string;
-}
+import { StatsProps } from '~/types';
 
 const Stats: React.FC<StatsProps> = ({
   totalVisited,
