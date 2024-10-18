@@ -23,8 +23,6 @@ export default function Home() {
     const userId = userData.id;
 
     try {
-      console.log('Updating status for:', isoCode, 'List type:', listType);
-      console.log('Before update:', visitedCountries, wishlistCountries);
       if (listType === 'visited') {
         if (visitedCountries.includes(isoCode)) {
           await removeVisitedCountry(userId, isoCode); // Remove from visited in backend
