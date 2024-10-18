@@ -1,14 +1,7 @@
 import React from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import countries from '~/assets/countries.json';
-
-interface CountryListProps {
-  countries: string[];
-  getCountryDetails: (
-    isoCode: string
-  ) => { name: string; flag: string; continent: string } | undefined;
-  showVisited: boolean;
-}
+import { CountryListProps } from '~/types';
 
 const regionColors: Record<string, string> = {
   Oceania: '#75C9DC',
@@ -42,7 +35,7 @@ const groupCountriesByContinent = (
   countries: string[],
   getCountryDetails: (
     isoCode: string
-  ) => { name: string; flag: string; continent: string } | undefined
+  ) => { name: string; continent: string } | undefined
 ) => {
   return countries.reduce(
     (acc, code) => {
@@ -56,7 +49,7 @@ const groupCountriesByContinent = (
       acc[continent].count += 1;
       return acc;
     },
-    {} as Record<string, { countries: { name: string; flag: string }[]; count: number }>
+    {} as Record<string, { countries: { name: string; }[]; count: number }>
   );
 };
 
