@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 import LoginButton from '../../components/LoginButton';
 import { useRouter } from 'expo-router';
 import { loginUser } from '~/services/authService';
+//@ts-ignore
 import image from '~/assets/loginImg.png';
 
 const LoginScreen = () => {
