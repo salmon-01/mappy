@@ -3,14 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import BottomSheet from '@gorhom/bottom-sheet';
 import CountryToggle from './CountryToggle';
 import CountryList from './CountryList';
-
-interface CountryBottomSheetProps {
-  showVisited: boolean;
-  onToggle: (value: boolean) => void;
-  visitedCountries: string[];
-  wishlistCountries: string[];
-  getCountryDetails: (isoCode: string) => { name: string; continent: string } | undefined;
-}
+import { CountryBottomSheetProps } from '~/types';
 
 const CountryBottomSheet: React.FC<CountryBottomSheetProps> = ({
   showVisited,
