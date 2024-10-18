@@ -1,12 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-
-interface SettingsSheetProps {
-  onClose: () => void;
-  onClearMap: () => void;
-  onLogout: () => void;
-  onDeleteAccount: () => void;
-}
+import { SettingsSheetProps } from '~/types';
 
 const SettingsSheet: React.FC<SettingsSheetProps> = ({
   onClose,
