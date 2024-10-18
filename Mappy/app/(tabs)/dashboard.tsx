@@ -6,7 +6,7 @@ import UserProfile from '~/components/UserProfile';
 import Stats from '~/components/Stats';
 import CountryBottomSheet from '~/components/CountryBottomSheet';
 import SettingsBottomSheet from '~/components/SettingsBottomSheet';
-
+// @ts-ignore
 import avatar from '~/assets/avatars/avatar1.png';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useRouter } from 'expo-router';
