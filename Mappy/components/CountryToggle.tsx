@@ -1,10 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { View, TouchableOpacity, Text, StyleSheet, Animated, Dimensions } from 'react-native';
-
-interface CountryToggleProps {
-  showVisited: boolean;
-  onToggle: (value: boolean) => void;
-}
+import { CountryToggleProps } from '~/types';
 
 const CountryToggle: React.FC<CountryToggleProps> = ({ showVisited, onToggle }) => {
   const screenWidth = Dimensions.get('window').width;
