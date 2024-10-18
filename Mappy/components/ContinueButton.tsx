@@ -1,9 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
-
-interface ContinueButtonProps {
-  onPress: () => void;
-}
+import { ContinueButtonProps } from '~/types';
 
 const ContinueButton: React.FC<ContinueButtonProps> = ({ onPress }) => {
   return (
