@@ -1,14 +1,7 @@
 import React from 'react';
 import BottomSheet from '@gorhom/bottom-sheet';
 import SettingsSheet from './SettingsSheet';
-
-interface SettingsBottomSheetProps {
-  isVisible: boolean;
-  onClose: () => void;
-  onClearMap: () => void;
-  onLogout: () => void;
-  onDeleteAccount: () => void;
-}
+import { SettingsSheetProps } from '~/types';
 
 const SettingsBottomSheet = ({
   isVisible,
@@ -16,7 +9,7 @@ const SettingsBottomSheet = ({
   onClearMap,
   onLogout,
   onDeleteAccount,
-}: SettingsBottomSheetProps) => {
+}: SettingsSheetProps) => {
   const snapPoints = ['90%'];
 
   return (
