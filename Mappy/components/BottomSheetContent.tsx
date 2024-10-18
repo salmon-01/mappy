@@ -1,13 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Animated } from 'react-native';
-
-interface BottomSheetContentProps {
-  selectedCountry: GeoJsonFeature | null;
-  visitedCountries: string[];
-  wishlistCountries: string[];
-  getCountryName: (isoCode: string) => string;
-  updateCountryStatus: (isoCode: string, listType: 'visited' | 'wishlist') => void;
-}
+import { BottomSheetContentProps } from '~/types';
 
 const BottomSheetContent: React.FC<BottomSheetContentProps> = ({
   selectedCountry,
@@ -20,8 +13,8 @@ const BottomSheetContent: React.FC<BottomSheetContentProps> = ({
   const wishlistOpacity = useRef(new Animated.Value(1)).current;
 
   const isoCode = selectedCountry?.properties.iso_3166_1_alpha_3 ?? null;
-  const isVisited = isoCode && visitedCountries.includes(isoCode);
-  const isWishlist = isoCode && wishlistCountries.includes(isoCode);
+  const isVisited = Boolean(isoCode && visitedCountries.includes(isoCode));
+  const isWishlist = Boolean(isoCode && wishlistCountries.includes(isoCode));
 
   useEffect(() => {
     if (isoCode) {
@@ -48,7 +41,7 @@ const BottomSheetContent: React.FC<BottomSheetContentProps> = ({
   };
 
   if (!selectedCountry) {
-    return;
+    return null;
   }
 
   return (
@@ -57,19 +50,21 @@ const BottomSheetContent: React.FC<BottomSheetContentProps> = ({
 
       <Animated.View style={{ opacity: visitedOpacity }}>
         <TouchableOpacity
-          style={[styles.button, isVisited && styles.visitedButton]}
+          style={[styles.button, isVisited ? styles.visitedButton : undefined]}
           onPress={handleVisitedPress}
           disabled={isWishlist}>
-          <Text style={[styles.buttonText, isVisited && styles.visitedButtonText]}>Visited</Text>
+          <Text style={[styles.buttonText, isVisited ? styles.visitedButtonText : undefined]}>
+            Visited
+          </Text>
         </TouchableOpacity>
       </Animated.View>
 
       <Animated.View style={{ opacity: wishlistOpacity }}>
         <TouchableOpacity
-          style={[styles.button, isWishlist && styles.wishlistButton]}
+          style={[styles.button, isWishlist ? styles.wishlistButton : undefined]}
           onPress={handleWishlistPress}
           disabled={isVisited}>
-          <Text style={[styles.buttonText, isWishlist && styles.wishlistButtonText]}>
+          <Text style={[styles.buttonText, isWishlist ? styles.wishlistButtonText : undefined]}>
             Want to visit
           </Text>
         </TouchableOpacity>
