@@ -1,15 +1,6 @@
 import React, { createContext, useState, ReactNode, useContext } from 'react';
+import { CountryContextType, GeoJsonFeature } from '~/types';
 
-interface CountryContextType {
-  visitedCountries: string[];
-  wishlistCountries: string[];
-  selectedCountry: GeoJsonFeature | null; 
-  setVisitedCountries: (countries: string[]) => void;
-  setWishlistCountries: (countries: string[]) => void;
-  setSelectedCountry: (country: GeoJsonFeature | null) => void;
-}
-
-// context with default values
 const CountryContext = createContext<CountryContextType | undefined>(undefined);
 
 export const useCountryContext = (): CountryContextType => {
