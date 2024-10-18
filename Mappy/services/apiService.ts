@@ -1,20 +1,7 @@
 import axios from 'axios';
+import { User } from '~/types';
 
 const BASE_URL = 'http://localhost:6543/api';
-
-interface User {
-  id: string;
-  username: string;
-  displayName: string;
-  avatar: string;
-}
-
-export interface Country {
-  code: string; 
-  name: string;
-  flag: string;
-  continent: string;
-}
 
 
 export const createUser = async (userData: User) => {
