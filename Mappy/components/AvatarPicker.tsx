@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, TouchableOpacity, Image, StyleSheet, Text } from 'react-native';
+import { AvatarPickerProps } from '~/types';
 
 const avatars: { [key: string]: any } = {
   avatar1: require('../assets/avatars/avatar1.png'),
@@ -8,11 +9,6 @@ const avatars: { [key: string]: any } = {
   avatar4: require('../assets/avatars/avatar4.png'),
   avatar5: require('../assets/avatars/avatar5.png'),
 };
-
-interface AvatarPickerProps {
-  selectedAvatar: string;
-  setAvatar: (avatar: string) => void;
-}
 
 const AvatarPicker: React.FC<AvatarPickerProps> = ({ selectedAvatar, setAvatar }) => {
   return (
